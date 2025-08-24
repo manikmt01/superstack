@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SuperStak Account</title>
+
+  <!-- favicon  -->
+  <link id="favicon" rel="icon" href="./img/favicon-light.ico" type="image/x-icon" />
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <!-- custom font start  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.min.css" />
+</head>
+
+<body class="font-Inter bg-white text-accent-secondary min-h-screen relative">
+  <header class="w-full border-b border-minimal-white h-[65px] md:h-[89px] flex items-center fixed top-0 bg-white z-50">
+    <nav class="flex items-center justify-between w-full px-4 lg:pl-[80px] lg:pr-[49px]">
+      <button onclick="openOffcanvas()" class="text-2xl inline-block md:hidden">
+        <i class="ri-menu-2-line"></i>
+      </button>
+      <!-- logo -->
+      <a href="/" class="inline-flex items-center gap-[9px]">
+        <img src="./img/mdi_react.svg" alt="" class="w-6 h-6" />
+        <span class="text-lg font-semibold">SuperStak</span>
+      </a>
+      <!-- Dropdown -->
+      <div class="hidden md:inline-flex items-center gap-[11px]">
+        <div class="relative md:w-[340px] lg:w-[426px]">
+          <!-- Button -->
+          <button id="dropdownBtn"
+            class="w-full flex justify-between items-center px-[12px] py-[10px] border rounded-lg border-minimal-white text-base font-medium focus:outline-none">
+            <span class="truncate block">Lorem ipsum dolor sit amet consectetur. Mi arcu.</span>
+            <!-- Your SVG Icon -->
+            <svg id="dropdownIcon" xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7"
+              fill="none" class="transition-transform duration-300">
+              <path d="M0.833334 1.20832L5.41667 5.79166L10 1.20832" stroke="#101136" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <!-- Floating Dropdown Content -->
+          <div id="dropdownContent"
+            class="hidden absolute left-0 mt-1 w-full border rounded-lg shadow-md bg-white text-base font-medium border-minimal-white z-50">
+            <div
+              class="px-[12px] py-[10px] border-b border-minimal-white flex justify-between items-center hover:bg-gray-50 cursor-pointer rounded-t-lg">
+              <span>Headline of the chat</span>
+              <div class="inline-flex flex-row justify-end items-center gap-[6px]">
+                <span
+                  class="inline-flex items-center gap-[3px] text-xs pl-[4px] pr-[7px] py-[3px] rounded-full bg-accent-secondary/10"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                    <path
+                      d="M7.00002 1.66666C10.2218 1.66666 12.8334 4.27825 12.8334 7.5C12.8334 10.7217 10.2218 13.3333 7.00002 13.3333C3.77827 13.3333 1.16669 10.7217 1.16669 7.5C1.16669 4.27825 3.77827 1.66666 7.00002 1.66666ZM7.00002 2.83333C5.76234 2.83333 4.57536 3.325 3.70019 4.20017C2.82502 5.07534 2.33335 6.26232 2.33335 7.5C2.33335 8.73767 2.82502 9.92466 3.70019 10.7998C4.57536 11.675 5.76234 12.1667 7.00002 12.1667C8.2377 12.1667 9.42468 11.675 10.2999 10.7998C11.175 9.92466 11.6667 8.73767 11.6667 7.5C11.6667 6.26232 11.175 5.07534 10.2999 4.20017C9.42468 3.325 8.2377 2.83333 7.00002 2.83333ZM7.00002 4C7.1429 4.00002 7.2808 4.05247 7.38757 4.14741C7.49434 4.24236 7.56255 4.37318 7.57927 4.51508L7.58335 4.58333V7.2585L9.16244 8.83758C9.26706 8.94256 9.3278 9.08342 9.33232 9.23155C9.33684 9.37969 9.28481 9.524 9.18679 9.63516C9.08877 9.74632 8.95212 9.81601 8.80458 9.83006C8.65704 9.84412 8.50968 9.80149 8.39244 9.71083L8.3376 9.66241L6.5876 7.91241C6.49694 7.82167 6.43871 7.70358 6.42194 7.57641L6.41669 7.5V4.58333C6.41669 4.42862 6.47815 4.28025 6.58754 4.17085C6.69694 4.06146 6.84531 4 7.00002 4Z"
+                      fill="#101136" />
+                  </svg>
+                  1 Hr ago</span>
+                <button class="cursor-pointer">
+                  <img src="./img/solar_menu-dots-bold.svg" alt="solar_menu" />
+                </button>
+              </div>
+            </div>
+            <div
+              class="px-[12px] py-[10px] border-b border-minimal-white flex justify-between items-center hover:bg-gray-50 cursor-pointer">
+              <span>Headline of the chat</span>
+              <div class="inline-flex flex-row justify-end items-center gap-[6px]">
+                <span
+                  class="inline-flex items-center gap-[3px] text-xs pl-[4px] pr-[7px] py-[3px] rounded-full bg-accent-secondary/10"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                    <path
+                      d="M7.00002 1.66666C10.2218 1.66666 12.8334 4.27825 12.8334 7.5C12.8334 10.7217 10.2218 13.3333 7.00002 13.3333C3.77827 13.3333 1.16669 10.7217 1.16669 7.5C1.16669 4.27825 3.77827 1.66666 7.00002 1.66666ZM7.00002 2.83333C5.76234 2.83333 4.57536 3.325 3.70019 4.20017C2.82502 5.07534 2.33335 6.26232 2.33335 7.5C2.33335 8.73767 2.82502 9.92466 3.70019 10.7998C4.57536 11.675 5.76234 12.1667 7.00002 12.1667C8.2377 12.1667 9.42468 11.675 10.2999 10.7998C11.175 9.92466 11.6667 8.73767 11.6667 7.5C11.6667 6.26232 11.175 5.07534 10.2999 4.20017C9.42468 3.325 8.2377 2.83333 7.00002 2.83333ZM7.00002 4C7.1429 4.00002 7.2808 4.05247 7.38757 4.14741C7.49434 4.24236 7.56255 4.37318 7.57927 4.51508L7.58335 4.58333V7.2585L9.16244 8.83758C9.26706 8.94256 9.3278 9.08342 9.33232 9.23155C9.33684 9.37969 9.28481 9.524 9.18679 9.63516C9.08877 9.74632 8.95212 9.81601 8.80458 9.83006C8.65704 9.84412 8.50968 9.80149 8.39244 9.71083L8.3376 9.66241L6.5876 7.91241C6.49694 7.82167 6.43871 7.70358 6.42194 7.57641L6.41669 7.5V4.58333C6.41669 4.42862 6.47815 4.28025 6.58754 4.17085C6.69694 4.06146 6.84531 4 7.00002 4Z"
+                      fill="#101136" />
+                  </svg>
+                  2 Days ago</span>
+                <button class="cursor-pointer">
+                  <img src="./img/solar_menu-dots-bold.svg" alt="solar_menu" />
+                </button>
+              </div>
+            </div>
+            <div
+              class="px-[12px] py-[10px] flex justify-between items-center hover:bg-gray-50 cursor-pointer rounded-b-lg">
+              <span>Headline of the chat</span>
+              <div class="inline-flex flex-row justify-end items-center gap-[6px]">
+                <span
+                  class="inline-flex items-center gap-[3px] text-xs pl-[4px] pr-[7px] py-[3px] rounded-full bg-accent-secondary/10"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                    <path
+                      d="M7.00002 1.66666C10.2218 1.66666 12.8334 4.27825 12.8334 7.5C12.8334 10.7217 10.2218 13.3333 7.00002 13.3333C3.77827 13.3333 1.16669 10.7217 1.16669 7.5C1.16669 4.27825 3.77827 1.66666 7.00002 1.66666ZM7.00002 2.83333C5.76234 2.83333 4.57536 3.325 3.70019 4.20017C2.82502 5.07534 2.33335 6.26232 2.33335 7.5C2.33335 8.73767 2.82502 9.92466 3.70019 10.7998C4.57536 11.675 5.76234 12.1667 7.00002 12.1667C8.2377 12.1667 9.42468 11.675 10.2999 10.7998C11.175 9.92466 11.6667 8.73767 11.6667 7.5C11.6667 6.26232 11.175 5.07534 10.2999 4.20017C9.42468 3.325 8.2377 2.83333 7.00002 2.83333ZM7.00002 4C7.1429 4.00002 7.2808 4.05247 7.38757 4.14741C7.49434 4.24236 7.56255 4.37318 7.57927 4.51508L7.58335 4.58333V7.2585L9.16244 8.83758C9.26706 8.94256 9.3278 9.08342 9.33232 9.23155C9.33684 9.37969 9.28481 9.524 9.18679 9.63516C9.08877 9.74632 8.95212 9.81601 8.80458 9.83006C8.65704 9.84412 8.50968 9.80149 8.39244 9.71083L8.3376 9.66241L6.5876 7.91241C6.49694 7.82167 6.43871 7.70358 6.42194 7.57641L6.41669 7.5V4.58333C6.41669 4.42862 6.47815 4.28025 6.58754 4.17085C6.69694 4.06146 6.84531 4 7.00002 4Z"
+                      fill="#101136" />
+                  </svg>
+                  3 Days ago</span>
+                <button class="cursor-pointer">
+                  <img src="./img/solar_menu-dots-bold.svg" alt="solar_menu" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="min-w-[44px] min-h-[34px] flex items-center justify-center rounded-lg border border-minimal-white px-[15px] py-[10px] hover:bg-gray-50 cursor-pointer">
+          <img src="./img/plus.svg" alt="plus" class="w-[14px] h-[14px]" />
+        </button>
+      </div>
+      <!-- Profile Dropdown -->
+      <div class="flex items-center gap-[12px]">
+        <button
+          class="lg:px-[12px] p-[10px] lg:py-[8px] border border-minimal-white rounded-lg flex items-center gap-[4px] hover:bg-gray-50 cursor-pointer text-base font-medium">
+          <img src="./img/share.svg" alt="share" /><span class="hidden md:inline-block">Share Live Chat</span>
+        </button>
+        <div class="profile-dropdown relative">
+          <!-- Trigger Button -->
+          <button
+            class="profile-btn flex justify-center items-center text-base text-white min-h-[40px] min-w-[39px] bg-accent-secondary rounded-lg font-medium focus:outline-none cursor-pointer">
+            <span>JS</span>
+          </button>
+
+          <!-- Dropdown Menu -->
+          <div
+            class="profile-content hidden absolute -right-2 md:-right-6 mt-5 w-56 border border-minimal-white bg-white rounded-2xl shadow-md z-50">
+            <!-- Arrow -->
+            <div class="absolute right-2 lg:right-6 -top-[22px] rotate-180 z-50">
+              <img src="./img/polygon.svg" alt="" />
+            </div>
+
+            <div class="flex flex-col rounded-xl overflow-hidden">
+              <a onclick="openModal('accountModal')"
+                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
+                <img src="./img/account.svg" alt="account" class="w-[14px] h-[14px]" />
+                Account
+              </a>
+              <a onclick="openModal('aiModal')"
+                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
+                <img src="./img/hugeicons_react.svg" alt="account" class="w-[14px] h-[14px]" />
+                My SuperStaks
+              </a>
+              <a href="#"
+                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
+                <img src="./img/subscription.svg" alt="account" class="w-[14px] h-[14px]" />
+                Subscription
+              </a>
+              <a onclick="openModal('loginModal')"
+                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
+                <img src="./img/subscription.svg" alt="account" class="w-[14px] h-[14px]" />
+                Login
+              </a>
+              <a onclick="openModal('signupModal')"
+                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
+                <img src="./img/subscription.svg" alt="account" class="w-[14px] h-[14px]" />
+                SignUp
+              </a>
+              <a href="./index.html"
+                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 text-sm md:text-base font-normal cursor-pointer">
+                <!-- Logout Icon -->
+                <img src="./img/mdi_logout.svg" alt="account" class="w-[14px] h-[14px]" />
+                Log Out
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Offcanvas Overlay -->
+  <div id="offcanvasOverlay" class="fixed inset-0 bg-white opacity-100 glass-bg hidden z-60" onclick="closeOffcanvas()">
+  </div>
+
+  <!-- Offcanvas Sidebar -->
+  <aside id="offcanvasMenu"
+    class="fixed z-100 top-0 left-0 w-72 h-full bg-white transform -translate-x-full transition-transform duration-300 flex flex-col">
+    <!-- Header -->
+    <div class="flex items-center justify-between border-b border-minimal-white p-4">
+      <a href="/" class="inline-flex items-center gap-[9px]">
+        <img src="./img/mdi_react.svg" alt="" class="w-6 h-6" />
+        <span class="text-lg font-semibold">SuperStak</span>
+      </a>
+      <button onclick="closeOffcanvas()"
+        class="bg-[#101136]/10 hover:bg-[#101136]/20 rounded-full w-[32px] h-[32px] flex items-center justify-center">
+        <img src="./img/x.svg" alt="" />
+      </button>
+    </div>
+    <div class="h-full overflow-y-auto flex flex-col gap-2 items-start w-full p-4">
+      <!-- + -->
+      <button
+        class="w-full p-3 rounded-lg border border-minimal-white bg-white flex flex-row items-center justify-between">
+        <div class="w-full flex items-center gap-[9px] text-sm font-medium">
+          <img src="./img/plus.svg" alt="" class="w-[14px] h-[14px]" />
+          <span>New Chat</span>
+        </div>
+      </button>
+      <!-- 1 -->
+      <div
+        class="w-full p-3 rounded-lg border border-minimal-white bg-white flex flex-row items-center justify-between">
+        <div class="w-full flex items-center justify-between gap-[5px] text-sm font-medium">
+          <span class="truncate block">Headline of the chat</span>
+          <div class="inline-flex flex-row justify-end items-center gap-[6px]">
+            <span
+              class="truncate inline-flex items-center gap-[3px] text-[10px] pl-[2px] pr-[5px] py-[2px] rounded-full bg-accent-secondary/10"><svg
+                xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                <path
+                  d="M7.00002 1.66666C10.2218 1.66666 12.8334 4.27825 12.8334 7.5C12.8334 10.7217 10.2218 13.3333 7.00002 13.3333C3.77827 13.3333 1.16669 10.7217 1.16669 7.5C1.16669 4.27825 3.77827 1.66666 7.00002 1.66666ZM7.00002 2.83333C5.76234 2.83333 4.57536 3.325 3.70019 4.20017C2.82502 5.07534 2.33335 6.26232 2.33335 7.5C2.33335 8.73767 2.82502 9.92466 3.70019 10.7998C4.57536 11.675 5.76234 12.1667 7.00002 12.1667C8.2377 12.1667 9.42468 11.675 10.2999 10.7998C11.175 9.92466 11.6667 8.73767 11.6667 7.5C11.6667 6.26232 11.175 5.07534 10.2999 4.20017C9.42468 3.325 8.2377 2.83333 7.00002 2.83333ZM7.00002 4C7.1429 4.00002 7.2808 4.05247 7.38757 4.14741C7.49434 4.24236 7.56255 4.37318 7.57927 4.51508L7.58335 4.58333V7.2585L9.16244 8.83758C9.26706 8.94256 9.3278 9.08342 9.33232 9.23155C9.33684 9.37969 9.28481 9.524 9.18679 9.63516C9.08877 9.74632 8.95212 9.81601 8.80458 9.83006C8.65704 9.84412 8.50968 9.80149 8.39244 9.71083L8.3376 9.66241L6.5876 7.91241C6.49694 7.82167 6.43871 7.70358 6.42194 7.57641L6.41669 7.5V4.58333C6.41669 4.42862 6.47815 4.28025 6.58754 4.17085C6.69694 4.06146 6.84531 4 7.00002 4Z"
+                  fill="#101136" />
+              </svg>
+              1 Hr ago</span>
+            <button class="cursor-pointer">
+              <img src="./img/solar_menu-dots-bold.svg" alt="solar_menu" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div
+        class="w-full p-3 rounded-lg border border-minimal-white bg-white flex flex-row items-center justify-between">
+        <div class="w-full flex items-center justify-between gap-[5px] text-sm font-medium">
+          <span class="truncate block">Headline of the chat</span>
+          <div class="inline-flex flex-row justify-end items-center gap-[6px]">
+            <span
+              class="truncate inline-flex items-center gap-[3px] text-[10px] pl-[2px] pr-[5px] py-[2px] rounded-full bg-accent-secondary/10"><svg
+                xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                <path
+                  d="M7.00002 1.66666C10.2218 1.66666 12.8334 4.27825 12.8334 7.5C12.8334 10.7217 10.2218 13.3333 7.00002 13.3333C3.77827 13.3333 1.16669 10.7217 1.16669 7.5C1.16669 4.27825 3.77827 1.66666 7.00002 1.66666ZM7.00002 2.83333C5.76234 2.83333 4.57536 3.325 3.70019 4.20017C2.82502 5.07534 2.33335 6.26232 2.33335 7.5C2.33335 8.73767 2.82502 9.92466 3.70019 10.7998C4.57536 11.675 5.76234 12.1667 7.00002 12.1667C8.2377 12.1667 9.42468 11.675 10.2999 10.7998C11.175 9.92466 11.6667 8.73767 11.6667 7.5C11.6667 6.26232 11.175 5.07534 10.2999 4.20017C9.42468 3.325 8.2377 2.83333 7.00002 2.83333ZM7.00002 4C7.1429 4.00002 7.2808 4.05247 7.38757 4.14741C7.49434 4.24236 7.56255 4.37318 7.57927 4.51508L7.58335 4.58333V7.2585L9.16244 8.83758C9.26706 8.94256 9.3278 9.08342 9.33232 9.23155C9.33684 9.37969 9.28481 9.524 9.18679 9.63516C9.08877 9.74632 8.95212 9.81601 8.80458 9.83006C8.65704 9.84412 8.50968 9.80149 8.39244 9.71083L8.3376 9.66241L6.5876 7.91241C6.49694 7.82167 6.43871 7.70358 6.42194 7.57641L6.41669 7.5V4.58333C6.41669 4.42862 6.47815 4.28025 6.58754 4.17085C6.69694 4.06146 6.84531 4 7.00002 4Z"
+                  fill="#101136" />
+              </svg>
+              2 Days ago</span>
+            <button class="cursor-pointer">
+              <img src="./img/solar_menu-dots-bold.svg" alt="solar_menu" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div
+        class="w-full p-3 rounded-lg border border-minimal-white bg-white flex flex-row items-center justify-between">
+        <div class="w-full flex items-center justify-between gap-[5px] text-sm font-medium">
+          <span class="truncate block">Headline of the chat</span>
+          <div class="inline-flex flex-row justify-end items-center gap-[6px]">
+            <span
+              class="truncate inline-flex items-center gap-[3px] text-[10px] pl-[2px] pr-[5px] py-[2px] rounded-full bg-accent-secondary/10"><svg
+                xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                <path
+                  d="M7.00002 1.66666C10.2218 1.66666 12.8334 4.27825 12.8334 7.5C12.8334 10.7217 10.2218 13.3333 7.00002 13.3333C3.77827 13.3333 1.16669 10.7217 1.16669 7.5C1.16669 4.27825 3.77827 1.66666 7.00002 1.66666ZM7.00002 2.83333C5.76234 2.83333 4.57536 3.325 3.70019 4.20017C2.82502 5.07534 2.33335 6.26232 2.33335 7.5C2.33335 8.73767 2.82502 9.92466 3.70019 10.7998C4.57536 11.675 5.76234 12.1667 7.00002 12.1667C8.2377 12.1667 9.42468 11.675 10.2999 10.7998C11.175 9.92466 11.6667 8.73767 11.6667 7.5C11.6667 6.26232 11.175 5.07534 10.2999 4.20017C9.42468 3.325 8.2377 2.83333 7.00002 2.83333ZM7.00002 4C7.1429 4.00002 7.2808 4.05247 7.38757 4.14741C7.49434 4.24236 7.56255 4.37318 7.57927 4.51508L7.58335 4.58333V7.2585L9.16244 8.83758C9.26706 8.94256 9.3278 9.08342 9.33232 9.23155C9.33684 9.37969 9.28481 9.524 9.18679 9.63516C9.08877 9.74632 8.95212 9.81601 8.80458 9.83006C8.65704 9.84412 8.50968 9.80149 8.39244 9.71083L8.3376 9.66241L6.5876 7.91241C6.49694 7.82167 6.43871 7.70358 6.42194 7.57641L6.41669 7.5V4.58333C6.41669 4.42862 6.47815 4.28025 6.58754 4.17085C6.69694 4.06146 6.84531 4 7.00002 4Z"
+                  fill="#101136" />
+              </svg>
+              3 Days ago</span>
+            <button class="cursor-pointer">
+              <img src="./img/solar_menu-dots-bold.svg" alt="solar_menu" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <main class="flex-grow overflow-y-auto">
+    <section class="md:pt-[130px] pt-24 px-4 md:pb-[180px] pb-[240px]">
+      <div class="max-w-[777px] mx-auto flex flex-row lg:flex-col gap-[14px] relative">
+        <div
+          class="min-w-[34px] max-h-[34px] lg:min-w-[48px] lg:min-h-[48px] rounded-lg border border-minimal-white flex items-center justify-center lg:absolute lg:-left-20 mb-[10px] md:pb-0">
+          <img src="./img/mdi_react.svg" alt="" class="w-6 h-6" />
+        </div>
+        <div class="flex flex-col gap-[14px]">
+          <div class="flex flex-row items-center gap-2 md:gap-[14px]">
+            <button
+              class="inline-flex items-center gap-[3px] px-2 py-[7px] md:px-[16px] md:py-[11px] text-sm font-medium bg-white border border-minimal-white rounded-lg hover:bg-accent-secondary/20 cursor-pointer">
+              <img src="./img/synthesize.svg" alt="" class="w-[14px] h-[14px] md:w-[18px] md:h-[18px]" /><span
+                class="hidden md:inline-block">SuperStak Synthesization</span>
+            </button>
+            <button
+              class="inline-flex items-center gap-[3px] px-2 py-1 md:px-[16px] md:py-[11px] text-sm font-medium bg-white border border-minimal-white rounded-lg hover:bg-accent-secondary/20 cursor-pointer">
+              <img src="./img/deepseek-logo-icon.png" alt="" class="w-[14px] h-[14px] md:w-[18px] md:h-[18px]" /><span
+                class="hidden md:inline-block">Deepseek R1</span><span
+                class="text-xs px-[5px] md:px-[8px] py-[2px] bg-[#1011361A] rounded-full ml-1 md:ml-[12px]">1</span>
+            </button>
+            <button
+              class="inline-flex items-center gap-[3px] px-2 py-1 md:px-[16px] md:py-[11px] text-sm font-medium bg-white border border-minimal-white rounded-lg hover:bg-accent-secondary/20 cursor-pointer">
+              <img src="./img/chat-gpt.png" alt="" class="w-[14px] h-[14px] md:w-[18px] md:h-[18px]" /><span
+                class="hidden md:inline-block"> ChatGPT o1</span><span
+                class="text-xs px-[5px] md:px-[8px] py-[2px] bg-[#1011361A] rounded-full ml-1 md:ml-[12px]">2</span>
+            </button>
+          </div>
+          <p class="text-sm font-medium">
+            Lorem ipsum dolor sit amet consectetur. Faucibus lectus odio
+            facilisis mi. Pretium amet lacus neque congue. Dictum at odio
+            justo adipiscing vel habitant.
+          </p>
+          <div class="flex flex-col md:flex-row items-center gap-3 justify-between mt-[3px]">
+            <div class="flex flex-row items-center gap-[14px]">
+              <button
+                class="inline-flex items-center gap-[3px] px-[10px] py-[6px] text-sm font-medium bg-white border border-minimal-white rounded-lg hover:bg-accent-secondary/20 cursor-pointer">
+                <img src="./img/share.svg" alt="" /><span>Share PDF</span>
+              </button>
+              <button
+                class="inline-flex items-center gap-[3px] px-[10px] py-[6px] text-sm font-medium bg-white border border-minimal-white rounded-lg hover:bg-accent-secondary/20 cursor-pointer">
+                <img src="./img/download.svg" alt="" /><span>Download PDF</span>
+              </button>
+            </div>
+            <div>
+              <button
+                class="inline-flex items-center text-sm font-medium bg-white border border-minimal-white rounded-lg cursor-pointer">
+                <div
+                  class="inline-flex items-center gap-[3px] px-[10px] py-[6px] hover:bg-accent-secondary/20 rounded-l-lg">
+                  <img src="./img/iconoir_brain.svg" alt="" /><span>Feedback</span>
+                </div>
+                <span class="px-[10px] py-[6px] border-x border-minimal-white hover:bg-accent-secondary/20"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                    <path
+                      d="M4.36328 11.2042L6.17161 12.6042C6.40495 12.8375 6.92995 12.9542 7.27995 12.9542H9.49662C10.1966 12.9542 10.9549 12.4292 11.1299 11.7292L12.5299 7.47082C12.8216 6.65416 12.2966 5.95416 11.4216 5.95416H9.08828C8.73828 5.95416 8.44661 5.66249 8.50495 5.25416L8.79661 3.38749C8.91328 2.86249 8.56328 2.27916 8.03828 2.10416C7.57161 1.92916 6.98828 2.16249 6.75495 2.51249L4.36328 6.07082"
+                      stroke="black" stroke-miterlimit="10" />
+                    <path
+                      d="M1.38843 11.2042V5.48751C1.38843 4.67085 1.73843 4.37918 2.55509 4.37918H3.13843C3.95509 4.37918 4.30509 4.67085 4.30509 5.48751V11.2042C4.30509 12.0208 3.95509 12.3125 3.13843 12.3125H2.55509C1.73843 12.3125 1.38843 12.0208 1.38843 11.2042Z"
+                      stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></span>
+                <span class="px-[10px] py-[6px] hover:bg-accent-secondary/20 rounded-r-lg"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                    <path
+                      d="M9.63672 3.79584L7.82839 2.39584C7.59505 2.16251 7.07005 2.04584 6.72005 2.04584H4.50338C3.80338 2.04584 3.04505 2.57084 2.87005 3.27084L1.47005 7.52918C1.17839 8.34584 1.70339 9.04584 2.57839 9.04584H4.91172C5.26172 9.04584 5.55339 9.33751 5.49505 9.74584L5.20339 11.6125C5.08672 12.1375 5.43672 12.7208 5.96172 12.8958C6.42839 13.0708 7.01172 12.8375 7.24505 12.4875L9.63672 8.92918"
+                      stroke="black" stroke-miterlimit="10" />
+                    <path
+                      d="M12.6116 3.79582V9.51249C12.6116 10.3292 12.2616 10.6208 11.4449 10.6208H10.8616C10.0449 10.6208 9.69491 10.3292 9.69491 9.51249V3.79582C9.69491 2.97915 10.0449 2.68748 10.8616 2.68748H11.4449C12.2616 2.68748 12.6116 2.97915 12.6116 3.79582Z"
+                      stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-y-[8px] md:gap-y-[12px] gap-x-[12px] md:gap-x-[20px] mt-4 md:mt-[3px]">
+            <button
+              class="inline-flex items-center gap-[9px] px-5 py-[12px] text-sm font-medium bg-white border border-minimal-white rounded-full hover:bg-accent-secondary/20 cursor-pointer w-full">
+              <img src="./img/plus.svg" alt="" class="w-4 h-4" /><span>Related Question #1</span>
+            </button>
+            <button
+              class="inline-flex items-center gap-[9px] px-5 py-[12px] text-sm font-medium bg-white border border-minimal-white rounded-full hover:bg-accent-secondary/20 cursor-pointer w-full">
+              <img src="./img/plus.svg" alt="" class="w-4 h-4" /><span>Related Question #2</span>
+            </button>
+            <button
+              class="inline-flex items-center gap-[9px] px-5 py-[12px] text-sm font-medium bg-white border border-minimal-white rounded-full hover:bg-accent-secondary/20 cursor-pointer w-full">
+              <img src="./img/plus.svg" alt="" class="w-4 h-4" /><span>Related Question #3</span>
+            </button>
+            <button
+              class="inline-flex items-center gap-[9px] px-5 py-[12px] text-sm font-medium bg-white border border-minimal-white rounded-full hover:bg-accent-secondary/20 cursor-pointer w-full">
+              <img src="./img/plus.svg" alt="" class="w-4 h-4" /><span>Related Question #4</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="fixed md:bottom-[30px] bottom-3 left-1/2 -translate-x-1/2 px-4 w-full">
+    <div class="max-w-[777px] mx-auto flex flex-col items-center gap-[11px]">
+      <button
+        class="inline-flex items-center gap-[3px] px-[12px] py-[6px] text-sm bg-white border border-minimal-white rounded-lg hover:bg-accent-secondary/20 cursor-pointer">
+        <img src="./img/synthesize.svg" alt="" /><span>Synthesize</span>
+      </button>
+      <!-- chat -->
+      <div class="w-full">
+        <div class="relative bg-white rounded-2xl shadow-md border border-minimal-white flex flex-col">
+          <!-- Chat Messages -->
+          <div id="chatMessages" class="hidden flex-1 overflow-y-auto p-4 space-y-2"></div>
+          <!-- Textarea Row -->
+          <div class="flex items-center px-4 py-[14px]">
+            <textarea id="chatInput" placeholder="Type Message..."
+              class="w-full resize-none border-none focus:ring-0 outline-0 text-dark-shade placeholder-dark-shade font-semibold text-sm h-8"></textarea>
+          </div>
+
+          <!-- Bottom Row -->
+          <div class="flex items-center justify-between px-4 py-[14px] border-t border-minimal-white">
+            <!-- Left: Dropdown -->
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-[12px] md:gap-[18px]">
+              <div
+                class="inline-flex items-center gap-[10px] lg:px-[15px] px-[6px] py-[6px] border border-minimal-white rounded-[10px] bg-white">
+                <img src="./img/synthesize.svg" alt="" /><span
+                  class="inline-block sm:hidden md:inline-block text-sm">Synthesize</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" value="" class="sr-only peer" checked />
+                  <div
+                    class="w-[32px] h-[18px] bg-gray-300 peer-checked:bg-green-500 rounded-full peer ring-transparent peer-focus:ring-2 peer-focus:ring-transparent transition-colors">
+                  </div>
+                  <div
+                    class="absolute left-[2px] top-[2px] w-[14px] h-[14px] bg-white rounded-full transition-transform peer-checked:translate-x-3.5">
+                  </div>
+                </label>
+              </div>
+              <div class="relative">
+                <button id="chatDropdownBtn"
+                  class="flex items-center gap-[3px] px-[10px] py-1.5 min-w-[170px] bg-white border border-minimal-white rounded-full font-medium text-sm focus:outline-none">
+                  <span class="text-sm"><img src="./img/hugeicons_react.svg" alt="mdi_react"
+                      class="w-4 h-4 inline-block mr-[3px]" />SuperStak Name #1</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                    <path d="M8.50002 10L11.8334 6.66669H5.16669L8.50002 10Z" fill="black" />
+                  </svg>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div id="chatDropdownContent"
+                  class="hidden absolute left-0 mt-1 -top-30 min-w-[170px] bg-white rounded-xl shadow-md z-50 border border-minimal-white">
+                  <div class="flex flex-col rounded-xl overflow-hidden">
+                    <a href="#" class="px-4 py-2 font-medium text-sm hover:bg-gray-50 border-b border-minimal-white">
+                      <span><img src="./img/hugeicons_react.svg" alt="mdi_react"
+                          class="w-4 h-4 inline-block mr-[3px]" />SuperStak Name #2</span></a>
+                    <a href="#"
+                      class="px-4 py-2 font-medium text-sm hover:bg-gray-50 border-b border-minimal-white"><span><img
+                          src="./img/hugeicons_react.svg" alt="mdi_react"
+                          class="w-4 h-4 inline-block mr-[3px]" />SuperStak Name #3</span></a>
+                    <a href="#" class="px-4 py-2 font-medium text-sm hover:bg-gray-50"><span><img
+                          src="./img/hugeicons_react.svg" alt="mdi_react"
+                          class="w-4 h-4 inline-block mr-[3px]" />SuperStak Name #4</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right: Attach + Send -->
+            <div class="flex items-center gap-[12px]">
+              <!-- Attachment -->
+              <button class="p-2 cursor-pointer" id="attachBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <path
+                    d="M21 9.22838V18.6667C21 20.5232 20.2625 22.3037 18.9497 23.6165C17.637 24.9292 15.8565 25.6667 14 25.6667C12.1435 25.6667 10.363 24.9292 9.05025 23.6165C7.7375 22.3037 7 20.5232 7 18.6667V7.00004C7 5.76236 7.49167 4.57538 8.36684 3.70021C9.24201 2.82504 10.429 2.33337 11.6667 2.33337C12.9043 2.33337 14.0913 2.82504 14.9665 3.70021C15.8417 4.57538 16.3333 5.76236 16.3333 7.00004V17.7124C16.3333 18.0188 16.273 18.3222 16.1557 18.6053C16.0385 18.8884 15.8666 19.1456 15.6499 19.3623C15.4332 19.579 15.176 19.7508 14.8929 19.8681C14.6098 19.9854 14.3064 20.0457 14 20.0457C13.3812 20.0457 12.7877 19.7999 12.3501 19.3623C11.9125 18.9247 11.6667 18.3312 11.6667 17.7124V9.33338"
+                    stroke="#101136" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <input type="file" id="fileInput" class="hidden" />
+
+              <!-- Send -->
+              <button class="flex justify-center items-center w-[34px] h-[34px] bg-black rounded-full cursor-pointer">
+                <img src="./img/arrow-top.svg" alt="" class="h-[14px]" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Modal Wrapper -->
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal fixed inset-0 hidden items-center justify-center glass-bg z-50 px-4"
+    onclick="overlayClick(event, 'loginModal')">
+    <div class="bg-white rounded-[30px] shadow-lg w-[616px] px-4 md:px-[30px] py-[40px] relative"
+      onclick="event.stopPropagation()">
+      <!-- Close -->
+      <!-- <button
+          onclick="closeModal('loginModal')"
+          class="absolute top-3 right-3 text-gray-300 hover:text-white text-xl"
+        >
+        </button> -->
+
+      <!-- Title -->
+      <div class="flex flex-row justify-center items-center gap-[9px]">
+        <div class="">
+          <img src="./img/mdi_react.svg" alt="" class="w-[32px] h-[32px]" />
+        </div>
+        <h2 class="text-2xl lg:text-[32px] font-semibold">SuperStak</h2>
+      </div>
+
+      <!-- Form -->
+      <form class="mt-10">
+        <!-- Email -->
+        <div>
+          <label class="block text-sm lg:text-base font-medium">Email</label>
+          <input type="email" placeholder="Type Email..."
+            class="w-full mt-[10px] px-5 py-[18px] rounded-xl bg-dark-gray focus:ring-2 focus:ring-white focus:outline-none placeholder-accent-primary border border-minimal-white" />
+        </div>
+
+        <!-- Password -->
+        <div class="mt-4">
+          <label class="block text-sm lg:text-base font-medium">Password</label>
+          <div class="relative">
+            <input type="password" placeholder="Type Password..."
+              class="password-input w-full mt-[10px] px-5 py-[18px] rounded-xl bg-dark-gray focus:ring-2 focus:ring-white focus:outline-none placeholder-accent-primary border border-minimal-white" />
+            <span
+              class="toggle-password absolute inset-y-0 right-3 flex items-center text-[#41484E] text-[21px] cursor-pointer">
+              <i class="ri-eye-line"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Login -->
+        <div class="px-5 mt-10">
+          <button type="submit"
+            class="w-full bg-black text-white py-[14px] px-[22px] rounded-lg font-medium text-base lg:text-2xl cursor-pointer">
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Signup Modal -->
+  <div id="signupModal" class="modal fixed inset-0 hidden items-center justify-center glass-bg z-50 px-4"
+    onclick="overlayClick(event, 'signupModal')">
+    <div class="bg-white rounded-[30px] shadow-lg w-[616px] px-4 md:px-[30px] py-[40px] relative opacity-100"
+      onclick="event.stopPropagation()">
+      <!-- Close -->
+      <!-- <button
+          onclick="closeModal('signupModal')"
+          class="absolute top-3 right-3 text-gray-300 hover:text-white text-xl"
+        >
+        </button> -->
+
+      <!-- Title -->
+      <div class="flex flex-row justify-center items-center gap-[9px]">
+        <div class="">
+          <img src="./img/mdi_react.svg" alt="" class="w-[32px] h-[32px]" />
+        </div>
+        <h2 class="text-2xl lg:text-[32px]text-[32px] font-semibold">
+          SuperStak
+        </h2>
+      </div>
+      <div class="text-center mt-4">
+        <h3 class="text-lg lg:text-[22px] font-semibold">Create Account</h3>
+        <h4 class="text-base lg:text-lg text-dark-blue font-medium">
+          Type in details to create account
+        </h4>
+      </div>
+
+      <!-- Form -->
+      <form class="mt-10">
+        <!-- Email -->
+        <div>
+          <label class="block text-sm lg:text-base font-medium">Email</label>
+          <input type="email" placeholder="Type Email..."
+            class="w-full mt-[10px] px-5 py-[18px] rounded-xl bg-dark-gray focus:ring-2 focus:ring-white focus:outline-none placeholder-accent-primary border border-minimal-white" />
+        </div>
+
+        <!-- Password -->
+        <div class="mt-4">
+          <label class="block text-sm lg:text-base font-medium">Password</label>
+          <div class="relative">
+            <input type="password" placeholder="Type Password..."
+              class="password-input w-full mt-[10px] px-5 py-[18px] rounded-xl bg-dark-gray focus:ring-2 focus:ring-white focus:outline-none placeholder-accent-primary border border-minimal-white" />
+            <span
+              class="toggle-password absolute inset-y-0 right-3 flex items-center text-[#41484E] text-[21px] cursor-pointer">
+              <i class="ri-eye-line"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Login -->
+        <div class="px-5 mt-10">
+          <button type="submit"
+            class="w-full bg-black text-white py-[14px] px-[22px] rounded-lg font-medium text-base lg:text-2xl cursor-pointer">
+            Create Account
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Create AI Model SuperStak Modal -->
+  <div id="createModal" class="modal fixed inset-0 hidden items-center justify-center glass-bg z-50 px-4"
+    onclick="overlayClick(event, 'createModal')">
+    <div class="bg-white rounded-[15px] shadow-lg w-full md:w-[592px] relative opacity-100"
+      onclick="event.stopPropagation()">
+      <!-- Title -->
+      <div class="flex flex-row justify-between items-center py-[12px] px-4 border-b border-minimal-white">
+        <div class="flex flex-row justify-center items-center gap-[9px]">
+          <div class="">
+            <img src="./img/mdi_react.svg" alt="" class="w-6 h-6" />
+          </div>
+          <h2 class="text-base lg:text-lg font-semibold">
+            Create AI Model SuperStak
+          </h2>
+        </div>
+        <div class="flex items-center gap-[12px]">
+          <button
+            class="inline-flex items-center gap-[10px] p-2 md:px-[15px] md:py-[10px] text-base font-medium rounded-[5px] border border-minimal-white cursor-pointer hover:bg-gray-50">
+            <img src="./img/help-circle-outline.svg" alt="help" class="" />
+            <span class="hidden md:inline-block">Setup Guide</span>
+          </button>
+          <button onclick="closeModal('createModal')"
+            class="bg-[#101136]/10 hover:bg-[#101136]/20 rounded-full w-[32px] h-[32px] flex items-center justify-center">
+            <img src="./img/x.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- models -->
+      <div class="p-4">
+        <h4 class="text-sm md:text-base font-medium">
+          Select The AI Models You Want To Include In Your SuperStak
+        </h4>
+        <div class="mt-3 flex flex-col border border-minimal-white rounded-[10px]">
+          <!-- 1 -->
+          <div
+            class="px-4 py-3 border-b border-minimal-white hover:bg-gray-50 cursor-pointer rounded-t-[10px] flex flex-row items-center justify-between gap-3">
+            <div class="space-x-[5px] space-y-[5px]">
+              <div
+                class="px-3 py-2 border border-minimal-white rounded-full inline-flex flex-row gap-[6px] items-center">
+                <div>
+                  <img src="./img/chat-gpt.png" alt="chatgpt" class="w-5 h-5" />
+                </div>
+                <span class="text-sm font-medium">ChatGPT 5</span>
+                <button class="cursor-pointer">
+                  <img src="./img/x.svg" alt="" />
+                </button>
+              </div>
+              <div
+                class="px-3 py-2 border border-minimal-white rounded-full inline-flex flex-row gap-[6px] items-center">
+                <div>
+                  <img src="./img/deepseek-logo-icon.png" alt="deepseek" class="w-5 h-5" />
+                </div>
+                <span class="text-sm font-medium">Deepseek R2</span>
+                <button class="cursor-pointer">
+                  <img src="./img/x.svg" alt="" />
+                </button>
+              </div>
+            </div>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none">
+                <path d="M11 1L6 6L1 1" stroke="#101136" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div
+            class="px-4 py-3 border-b border-minimal-white hover:bg-gray-50 cursor-pointer flex flex-row items-center justify-between gap-3">
+            <div class="inline-flex flex-row gap-[10px] items-center">
+              <div>
+                <img src="./img/chat-gpt.png" alt="chatgpt" class="w-5 h-5" />
+              </div>
+              <span class="text-sm lg:text-base font-normal">ChatGPT 5</span>
+            </div>
+            <div class="inline-flex items-center justify-end gap-[6px] md:gap-[10px]">
+              <div
+                class="bg-[#21D03D1A] px-2 lg:px-4 py-2 rounded-[5px] inline-flex text-sm lg:text-base items-center gap-[5px] lg:gap-[10px]">
+                <span class="w-[10px] h-[10px] rounded-full bg-greens text-sm lg:text-base"></span>Connected
+              </div>
+              <button class="cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M10.0001 5.83333C9.55805 5.83333 9.13413 5.65774 8.82157 5.34518C8.50901 5.03262 8.33341 4.60869 8.33341 4.16667C8.33341 3.72464 8.50901 3.30072 8.82157 2.98816C9.13413 2.67559 9.55805 2.5 10.0001 2.5C10.4421 2.5 10.866 2.67559 11.1786 2.98816C11.4912 3.30072 11.6667 3.72464 11.6667 4.16667C11.6667 4.60869 11.4912 5.03262 11.1786 5.34518C10.866 5.65774 10.4421 5.83333 10.0001 5.83333ZM10.0001 11.6667C9.55805 11.6667 9.13413 11.4911 8.82157 11.1785C8.50901 10.866 8.33341 10.442 8.33341 10C8.33341 9.55797 8.50901 9.13405 8.82157 8.82149C9.13413 8.50893 9.55805 8.33333 10.0001 8.33333C10.4421 8.33333 10.866 8.50893 11.1786 8.82149C11.4912 9.13405 11.6667 9.55797 11.6667 10C11.6667 10.442 11.4912 10.866 11.1786 11.1785C10.866 11.4911 10.4421 11.6667 10.0001 11.6667ZM10.0001 17.5C9.55805 17.5 9.13413 17.3244 8.82157 17.0118C8.50901 16.6993 8.33341 16.2754 8.33341 15.8333C8.33341 15.3913 8.50901 14.9674 8.82157 14.6548C9.13413 14.3423 9.55805 14.1667 10.0001 14.1667C10.4421 14.1667 10.866 14.3423 11.1786 14.6548C11.4912 14.9674 11.6667 15.3913 11.6667 15.8333C11.6667 16.2754 11.4912 16.6993 11.1786 17.0118C10.866 17.3244 10.4421 17.5 10.0001 17.5Z"
+                    fill="#101136" />
+                </svg>
+              </button>
+              <input type="checkbox" id="gptCheck"
+                class="peer appearance-none w-6 h-6 rounded-[4px] border-[2px] border-gray-300 checked:bg-black checked:border-black cursor-pointer relative" />
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="px-4 py-3 hover:bg-gray-50 cursor-pointer flex flex-row items-center justify-between gap-3">
+            <div class="inline-flex flex-row gap-[10px] items-center">
+              <div>
+                <img src="./img/deepseek-logo-icon.png" alt="chatgpt" class="w-5 h-5" />
+              </div>
+              <span class="text-sm lg:text-base font-normal">Deepseek R2</span>
+            </div>
+            <div class="inline-flex items-center justify-end gap-[10px]">
+              <div onclick="openModal('keyModal')"
+                class="bg-[#000] text-white px-4 py-2 rounded-[5px] inline-flex items-center text-sm lg:text-base">
+                Connect
+              </div>
+              <input type="checkbox" id="gptCheck"
+                class="peer appearance-none w-6 h-6 rounded-[4px] border-[2px] border-gray-300 checked:bg-black checked:border-black cursor-pointer relative" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- buttons -->
+      <div class="flex flex-row justify-between items-center px-4 py-3 border-t border-minimal-white gap-4">
+        <button
+          class="w-full py-[14px] text-sm lg:text-base font-medium bg-black text-white rounded-[8px] cursor-pointer hover:bg-gray-800">
+          Create SuperStak
+        </button>
+        <button onclick="closeModal('createModal')"
+          class="w-full py-[14px] text-sm lg:text-base font-medium rounded-[8px] border border-minimal-white cursor-pointer hover:bg-gray-50">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- key Modal -->
+  <div id="keyModal" class="modal fixed inset-0 hidden items-center justify-center glass-bg z-50 px-4"
+    onclick="overlayClick(event, 'keyModal')">
+    <div class="bg-white rounded-[15px] shadow-lg w-full md:w-[578px] relative opacity-100"
+      onclick="event.stopPropagation()">
+      <!-- Title -->
+      <div class="flex flex-row justify-between items-center py-[12px] px-4 border-b border-minimal-white">
+        <div class="flex flex-row justify-center items-center gap-[5px]">
+          <div class="">
+            <img src="./img/chat-gpt.png" alt="" class="w-5 h-5" />
+          </div>
+          <h2 class="text-base lg:text-lg font-semibold">
+            Input ChatGPT API Key
+          </h2>
+        </div>
+        <div class="flex items-center gap-[12px]">
+          <button
+            class="inline-flex items-center gap-[10px] p-2 md:px-[15px] md:py-[10px] text-base font-medium rounded-[5px] border border-minimal-white cursor-pointer hover:bg-gray-50">
+            <img src="./img/help-circle-outline.svg" alt="help" class="" />
+            <span class="hidden md:inline-block">Setup Guide</span>
+          </button>
+          <button onclick="closeModal('keyModal')"
+            class="bg-[#101136]/10 hover:bg-[#101136]/20 rounded-full w-[32px] h-[32px] flex items-center justify-center">
+            <img src="./img/x.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- models -->
+      <div class="px-4 pt-4">
+        <h4 class="text-sm font-medium">Input ChatGPT API Key</h4>
+        <input type="text" placeholder="Type API Key..."
+          class="w-full mt-[10px] p-5 rounded-xl text-sm lg:text-base font-medium bg-white focus:ring-2 focus:ring-white focus:outline-none placeholder-accent-secondary border border-minimal-white" />
+      </div>
+      <!-- buttons -->
+      <div class="flex flex-row justify-between items-center px-4 py-[18px] gap-4">
+        <button
+          class="w-full px-[22px] py-[14px] text-sm lg:text-base font-medium bg-black text-white rounded-[8px] cursor-pointer hover:bg-gray-800">
+          Save
+        </button>
+        <button onclick="closeModal('keyModal')"
+          class="w-full px-[22px] py-[14px] text-sm lg:text-base font-medium rounded-[8px] border border-minimal-white cursor-pointer hover:bg-gray-50">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- AI Model SuperStaks -->
+  <div id="aiModal" class="modal fixed inset-0 hidden items-center justify-center glass-bg z-50 px-4"
+    onclick="overlayClick(event, 'aiModal')">
+    <div class="bg-white rounded-[15px] shadow-lg w-full md:w-[578px] relative opacity-100"
+      onclick="event.stopPropagation()">
+      <!-- Title -->
+      <div class="flex flex-row justify-between items-center py-[12px] px-4 border-b border-minimal-white">
+        <div class="flex flex-row justify-center items-center gap-[5px]">
+          <div class="">
+            <img src="./img/hugeicons_react.svg" alt="" class="w-6 h-6" />
+          </div>
+          <h2 class="text-base lg:text-lg font-semibold">
+            AI Model SuperStaks
+          </h2>
+        </div>
+        <div class="flex items-center gap-[12px]">
+          <button
+            class="inline-flex items-center gap-[10px] p-2 md:px-[15px] md:py-[10px] text-base font-medium rounded-[5px] border border-minimal-white cursor-pointer hover:bg-gray-50">
+            <img src="./img/plus.svg" alt="help" class="" />
+            <span class="hidden md:inline-block">Create SuperStak</span>
+          </button>
+          <button onclick="closeModal('aiModal')"
+            class="bg-[#101136]/10 hover:bg-[#101136]/20 rounded-full w-[32px] h-[32px] flex items-center justify-center">
+            <img src="./img/x.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- models -->
+      <div class="px-4 pt-4 flex flex-col gap-3">
+        <div class="p-3 rounded-lg border border-minimal-white bg-white flex flex-row items-center justify-between">
+          <div class="flex items-center gap-[5px] text-sm lg:text-base font-medium">
+            <img src="./img/hugeicons_react.svg" alt="" class="w-6 h-6" /><span>SuperStak Name #1</span>
+          </div>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M10.0001 5.83333C9.55805 5.83333 9.13413 5.65774 8.82157 5.34518C8.50901 5.03262 8.33341 4.60869 8.33341 4.16667C8.33341 3.72464 8.50901 3.30072 8.82157 2.98816C9.13413 2.67559 9.55805 2.5 10.0001 2.5C10.4421 2.5 10.866 2.67559 11.1786 2.98816C11.4912 3.30072 11.6667 3.72464 11.6667 4.16667C11.6667 4.60869 11.4912 5.03262 11.1786 5.34518C10.866 5.65774 10.4421 5.83333 10.0001 5.83333ZM10.0001 11.6667C9.55805 11.6667 9.13413 11.4911 8.82157 11.1785C8.50901 10.866 8.33341 10.442 8.33341 10C8.33341 9.55797 8.50901 9.13405 8.82157 8.82149C9.13413 8.50893 9.55805 8.33333 10.0001 8.33333C10.4421 8.33333 10.866 8.50893 11.1786 8.82149C11.4912 9.13405 11.6667 9.55797 11.6667 10C11.6667 10.442 11.4912 10.866 11.1786 11.1785C10.866 11.4911 10.4421 11.6667 10.0001 11.6667ZM10.0001 17.5C9.55805 17.5 9.13413 17.3244 8.82157 17.0118C8.50901 16.6993 8.33341 16.2754 8.33341 15.8333C8.33341 15.3913 8.50901 14.9674 8.82157 14.6548C9.13413 14.3423 9.55805 14.1667 10.0001 14.1667C10.4421 14.1667 10.866 14.3423 11.1786 14.6548C11.4912 14.9674 11.6667 15.3913 11.6667 15.8333C11.6667 16.2754 11.4912 16.6993 11.1786 17.0118C10.866 17.3244 10.4421 17.5 10.0001 17.5Z"
+                fill="#101136" />
+            </svg>
+          </button>
+        </div>
+        <div class="p-3 rounded-lg border border-minimal-white bg-white flex flex-row items-center justify-between">
+          <div class="flex items-center gap-[5px] text-sm lg:text-base font-medium">
+            <img src="./img/hugeicons_react.svg" alt="" class="w-6 h-6" /><span>SuperStak Name #1</span>
+          </div>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M10.0001 5.83333C9.55805 5.83333 9.13413 5.65774 8.82157 5.34518C8.50901 5.03262 8.33341 4.60869 8.33341 4.16667C8.33341 3.72464 8.50901 3.30072 8.82157 2.98816C9.13413 2.67559 9.55805 2.5 10.0001 2.5C10.4421 2.5 10.866 2.67559 11.1786 2.98816C11.4912 3.30072 11.6667 3.72464 11.6667 4.16667C11.6667 4.60869 11.4912 5.03262 11.1786 5.34518C10.866 5.65774 10.4421 5.83333 10.0001 5.83333ZM10.0001 11.6667C9.55805 11.6667 9.13413 11.4911 8.82157 11.1785C8.50901 10.866 8.33341 10.442 8.33341 10C8.33341 9.55797 8.50901 9.13405 8.82157 8.82149C9.13413 8.50893 9.55805 8.33333 10.0001 8.33333C10.4421 8.33333 10.866 8.50893 11.1786 8.82149C11.4912 9.13405 11.6667 9.55797 11.6667 10C11.6667 10.442 11.4912 10.866 11.1786 11.1785C10.866 11.4911 10.4421 11.6667 10.0001 11.6667ZM10.0001 17.5C9.55805 17.5 9.13413 17.3244 8.82157 17.0118C8.50901 16.6993 8.33341 16.2754 8.33341 15.8333C8.33341 15.3913 8.50901 14.9674 8.82157 14.6548C9.13413 14.3423 9.55805 14.1667 10.0001 14.1667C10.4421 14.1667 10.866 14.3423 11.1786 14.6548C11.4912 14.9674 11.6667 15.3913 11.6667 15.8333C11.6667 16.2754 11.4912 16.6993 11.1786 17.0118C10.866 17.3244 10.4421 17.5 10.0001 17.5Z"
+                fill="#101136" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- buttons -->
+      <div class="flex flex-row justify-between items-center px-4 pt-[21px] pb-[11px] gap-4">
+        <button
+          class="w-full px-[22px] py-[14px] text-sm lg:text-base font-medium bg-black text-white rounded-[8px] cursor-pointer hover:bg-gray-800">
+          Save
+        </button>
+        <button onclick="closeModal('aiModal')"
+          class="w-full px-[22px] py-[14px] text-sm lg:text-base font-medium rounded-[8px] border border-minimal-white cursor-pointer hover:bg-gray-50">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- account -->
+  <div id="accountModal" class="modal fixed inset-0 hidden items-center justify-center glass-bg z-50 px-4"
+    onclick="overlayClick(event, 'accountModal')">
+    <div class="bg-white rounded-[15px] shadow-lg w-full md:w-[578px] relative opacity-100"
+      onclick="event.stopPropagation()">
+      <!-- Title -->
+      <div class="flex flex-row justify-between items-center py-[12px] px-4 border-b border-minimal-white">
+        <div class="flex flex-row justify-center items-center gap-[9px]">
+          <div class="">
+            <img src="./img/account.svg" alt="" class="w-4 h-4" />
+          </div>
+          <h2 class="text-base lg:text-lg font-semibold">Account</h2>
+        </div>
+        <div class="flex items-center gap-[12px]">
+          <button onclick="closeModal('accountModal')"
+            class="bg-[#101136]/10 hover:bg-[#101136]/20 rounded-full w-[32px] h-[32px] flex items-center justify-center">
+            <img src="./img/x.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- models -->
+      <div class="px-4 pt-4 pb-[18px] flex flex-col gap-4">
+        <div>
+          <label class="block text-sm lg:text-base font-medium mb-[10px]">Email</label>
+          <div class="flex">
+            <input type="email" placeholder="Type Email..."
+              class="w-full p-5 rounded-l-xl text-sm lg:text-base font-medium bg-white focus:ring-2 focus:ring-white focus:outline-none placeholder-accent-secondary border border-minimal-white" />
+            <button type="button"
+              class="px-4 py-5 bg-black text-white text-sm font-medium rounded-r-xl border border-minimal-white border-l-0 cursor-pointer">
+              Update
+            </button>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm lg:text-base font-medium mb-[10px]">Password</label>
+          <div class="flex">
+            <input type="Password" placeholder="Type Password..."
+              class="w-full p-5 rounded-l-xl text-sm lg:text-base font-medium bg-white focus:ring-2 focus:ring-white focus:outline-none placeholder-accent-secondary border border-minimal-white" />
+            <button type="button"
+              class="px-4 py-5 bg-black text-white text-sm font-medium rounded-r-xl border border-minimal-white border-l-0 cursor-pointer">
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const favicon = document.getElementById("favicon");
+
+    function setFavicon() {
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        favicon.href = "./img/favicon-dark.ico"; // dark mode
+      } else {
+        favicon.href = "./img/favicon-light.ico"; // light mode
+      }
+    }
+
+    // Initial check
+    setFavicon();
+
+    // Listen for changes in color scheme
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", setFavicon);
+  </script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

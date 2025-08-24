@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@theme {
+  --font-Inter: "Inter", sans-serif;
+
+  --breakpoint-xsm: 370px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1216px;
+  --breakpoint-2xl: 1536px;
+
+  --container-xsm: 100%;
+  --container-sm: 100%;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-padding: 32px;
+
+  --color-accent-primary: #284a70;
+  --color-accent-secondary: #101136;
+  --color-minimal-white: #e6eaed;
+  --color-pure-white: #fafafa;
+  --color-dark-shade: #575a7b;
+  --color-dark-gray: #f7f8f8;
+  --color-dark-blue: #41484e;
+  --color-greens: #21d03d;
+}
+
+.glass-bg {
+  background: rgba(2, 11, 19, 0.42); /* #020B13 with 42% transparency */
+  backdrop-filter: blur(60.5px);
+  -webkit-backdrop-filter: blur(60.5px); /* for Safari */
+}
+ #gptCheck:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: white;
+}
