@@ -23,13 +23,13 @@
 
 <body class="font-Inter bg-white text-accent-secondary min-h-screen relative">
   <header class="w-full border-b border-minimal-white h-[65px] md:h-[89px] flex items-center fixed top-0 bg-white z-50">
-    <nav class="flex items-center justify-between w-full px-4 lg:pl-[80px] lg:pr-[49px]">
+    <nav class="flex items-center justify-between w-full px-4 lg:px-[80px]">
       <button onclick="openOffcanvas()" class="text-2xl inline-block md:hidden">
         <i class="ri-menu-2-line"></i>
       </button>
       <!-- logo -->
       <a href="/" class="inline-flex items-center gap-[9px]">
-        <img src="./img/mdi_react.svg" alt="" class="w-6 h-6" />
+        <img src="./img/mdi_react.svg" alt="" class="w-6 h-6 md:block hidden" />
         <span class="text-lg font-semibold">SuperStak</span>
       </a>
       <!-- Dropdown -->
@@ -109,59 +109,55 @@
         </button>
       </div>
       <!-- Profile Dropdown -->
-      <div class="flex items-center gap-[12px]">
-        <button
-          class="lg:px-[12px] p-[10px] lg:py-[8px] border border-minimal-white rounded-lg flex items-center gap-[4px] hover:bg-gray-50 cursor-pointer text-base font-medium">
-          <img src="./img/share.svg" alt="share" /><span class="hidden md:inline-block">Share Live Chat</span>
-        </button>
-        <div class="profile-dropdown relative">
-          <!-- Trigger Button -->
+      <div class="profile-dropdown relative">
+        <!-- Trigger Button -->
+        <div class="md:w-[124px] flex justify-end">
           <button
             class="profile-btn flex justify-center items-center text-base text-white min-h-[40px] min-w-[39px] bg-accent-secondary rounded-lg font-medium focus:outline-none cursor-pointer">
             <span>JS</span>
           </button>
+        </div>
 
-          <!-- Dropdown Menu -->
-          <div
-            class="profile-content hidden absolute -right-2 md:-right-6 mt-5 w-56 border border-minimal-white bg-white rounded-2xl shadow-md z-50">
-            <!-- Arrow -->
-            <div class="absolute right-2 lg:right-6 -top-[22px] rotate-180 z-50">
-              <img src="./img/polygon.svg" alt="" />
-            </div>
+        <!-- Dropdown Menu -->
+        <div
+          class="profile-content hidden absolute -right-2 md:-right-6 mt-5 w-56 border border-minimal-white bg-white rounded-2xl shadow-md z-50">
+          <!-- Arrow -->
+          <div class="absolute right-2 lg:right-6 -top-[22px] rotate-180 z-50">
+            <img src="./img/polygon.svg" alt="" />
+          </div>
 
-            <div class="flex flex-col rounded-xl overflow-hidden">
-              <a onclick="openModal('accountModal')"
-                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
-                <img src="./img/account.svg" alt="account" class="w-[14px] h-[14px]" />
-                Account
-              </a>
-              <a onclick="openModal('aiModal')"
-                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
-                <img src="./img/hugeicons_react.svg" alt="account" class="w-[14px] h-[14px]" />
-                My SuperStaks
-              </a>
-              <a href="#"
-                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
-                <img src="./img/subscription.svg" alt="account" class="w-[14px] h-[14px]" />
-                Subscription
-              </a>
-              <a onclick="openModal('loginModal')"
-                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
-                <img src="./img/subscription.svg" alt="account" class="w-[14px] h-[14px]" />
-                Login
-              </a>
-              <a onclick="openModal('signupModal')"
-                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
-                <img src="./img/subscription.svg" alt="account" class="w-[14px] h-[14px]" />
-                SignUp
-              </a>
-              <a href="./index.html"
-                class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 text-sm md:text-base font-normal cursor-pointer">
-                <!-- Logout Icon -->
-                <img src="./img/mdi_logout.svg" alt="account" class="w-[14px] h-[14px]" />
-                Log Out
-              </a>
-            </div>
+          <div class="flex flex-col rounded-xl overflow-hidden">
+            <a onclick="openModal('accountModal')"
+              class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
+              <img src="./img/account.svg" alt="account" class="w-[14px] h-[14px]" />
+              Account
+            </a>
+            <a onclick="openModal('aiModal')"
+              class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
+              <img src="./img/hugeicons_react.svg" alt="account" class="w-[14px] h-[14px]" />
+              My SuperStaks
+            </a>
+            <a href="#"
+              class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
+              <img src="./img/subscription.svg" alt="account" class="w-[14px] h-[14px]" />
+              Subscription
+            </a>
+            <a onclick="openModal('loginModal')"
+              class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
+              <img src="./img/subscription.svg" alt="account" class="w-[14px] h-[14px]" />
+              Login
+            </a>
+            <a onclick="openModal('signupModal')"
+              class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 border-b border-minimal-white text-sm md:text-base font-normal cursor-pointer">
+              <img src="./img/subscription.svg" alt="account" class="w-[14px] h-[14px]" />
+              SignUp
+            </a>
+            <a href="#"
+              class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 text-sm md:text-base font-normal cursor-pointer">
+              <!-- Logout Icon -->
+              <img src="./img/mdi_logout.svg" alt="account" class="w-[14px] h-[14px]" />
+              Log Out
+            </a>
           </div>
         </div>
       </div>
@@ -260,7 +256,7 @@
     <section class="md:pt-[130px] pt-24 px-4 md:pb-[180px] pb-[240px]">
       <div class="max-w-[777px] mx-auto flex flex-row lg:flex-col gap-[14px] relative">
         <div
-          class="min-w-[34px] max-h-[34px] lg:min-w-[48px] lg:min-h-[48px] rounded-lg border border-minimal-white flex items-center justify-center lg:absolute lg:-left-20 mb-[10px] md:pb-0">
+          class="min-w-[34px] max-h-[34px] lg:min-w-[48px] lg:min-h-[48px] rounded-lg border border-minimal-white md:flex hidden items-center justify-center lg:absolute lg:-left-20 mb-[10px] md:pb-0">
           <img src="./img/mdi_react.svg" alt="" class="w-6 h-6" />
         </div>
         <div class="flex flex-col gap-[14px]">
@@ -288,23 +284,23 @@
             facilisis mi. Pretium amet lacus neque congue. Dictum at odio
             justo adipiscing vel habitant.
           </p>
-          <div class="flex flex-col md:flex-row items-center gap-3 justify-between mt-[3px]">
-            <div class="flex flex-row items-center gap-[14px]">
+          <div class="flex flex-row items-center gap-2 md:gap-3 md:justify-between justify-center flex-wrap mt-[3px]">
+            <div class="flex flex-row items-center gap-2.5 md:gap-[14px]">
               <button
                 class="inline-flex items-center gap-[3px] px-[10px] py-[6px] text-sm font-medium bg-white border border-minimal-white rounded-lg hover:bg-accent-secondary/20 cursor-pointer">
-                <img src="./img/share.svg" alt="" /><span>Share PDF</span>
+                <img src="./img/share.svg" alt="" /><span>Share <span class="md:inline hidden">PDF</span></span>
               </button>
               <button
                 class="inline-flex items-center gap-[3px] px-[10px] py-[6px] text-sm font-medium bg-white border border-minimal-white rounded-lg hover:bg-accent-secondary/20 cursor-pointer">
-                <img src="./img/download.svg" alt="" /><span>Download PDF</span>
+                <img src="./img/download.svg" alt="" /><span>Download <span class="md:inline hidden">PDF</span></span>
               </button>
             </div>
             <div>
               <button
-                class="inline-flex items-center text-sm font-medium bg-white border border-minimal-white rounded-lg cursor-pointer">
+                class="inline-flex items-center text-sm font-medium bg-white border border-minimal-white rounded-lg cursor-pointer md:min-h-auto min-h-[34px]">
                 <div
                   class="inline-flex items-center gap-[3px] px-[10px] py-[6px] hover:bg-accent-secondary/20 rounded-l-lg">
-                  <img src="./img/iconoir_brain.svg" alt="" /><span>Feedback</span>
+                  <img src="./img/iconoir_brain.svg" alt="" /><span class="md:inline-block hidden">Feedback</span>
                 </div>
                 <span class="px-[10px] py-[6px] border-x border-minimal-white hover:bg-accent-secondary/20"><svg
                     xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
@@ -362,19 +358,18 @@
           <!-- Chat Messages -->
           <div id="chatMessages" class="hidden flex-1 overflow-y-auto p-4 space-y-2"></div>
           <!-- Textarea Row -->
-          <div class="flex items-center px-4 py-[14px]">
+          <div class="flex items-center px-2.5 md:px-4 py-[14px]">
             <textarea id="chatInput" placeholder="Type Message..."
-              class="w-full resize-none border-none focus:ring-0 outline-0 text-dark-shade placeholder-dark-shade font-semibold text-sm h-8"></textarea>
+              class="w-full resize-none border-none focus:ring-0 outline-0 text-dark-shade placeholder-dark-shade font-semibold text-xs md:text-sm h-8"></textarea>
           </div>
 
           <!-- Bottom Row -->
-          <div class="flex items-center justify-between px-4 py-[14px] border-t border-minimal-white">
+          <div class="flex items-center justify-between px-2 md:px-4 py-[14px] border-t border-minimal-white">
             <!-- Left: Dropdown -->
-            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-[12px] md:gap-[18px]">
+            <div class="flex flex-row items-start sm:items-center gap-2.5 md:gap-[18px] flex-wrap">
               <div
                 class="inline-flex items-center gap-[10px] lg:px-[15px] px-[6px] py-[6px] border border-minimal-white rounded-[10px] bg-white">
-                <img src="./img/synthesize.svg" alt="" /><span
-                  class="inline-block sm:hidden md:inline-block text-sm">Synthesize</span>
+                <img src="./img/synthesize.svg" alt="" /><span class="hidden md:inline-block text-sm">Synthesize</span>
                 <label class="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" value="" class="sr-only peer" checked />
                   <div
@@ -388,7 +383,7 @@
               <div class="relative">
                 <button id="chatDropdownBtn"
                   class="flex items-center gap-[3px] px-[10px] py-1.5 min-w-[170px] bg-white border border-minimal-white rounded-full font-medium text-sm focus:outline-none">
-                  <span class="text-sm"><img src="./img/hugeicons_react.svg" alt="mdi_react"
+                  <span class="text-xs md:text-sm"><img src="./img/hugeicons_react.svg" alt="mdi_react"
                       class="w-4 h-4 inline-block mr-[3px]" />SuperStak Name #1</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
                     <path d="M8.50002 10L11.8334 6.66669H5.16669L8.50002 10Z" fill="black" />
@@ -399,14 +394,15 @@
                 <div id="chatDropdownContent"
                   class="hidden absolute left-0 mt-1 -top-30 min-w-[170px] bg-white rounded-xl shadow-md z-50 border border-minimal-white">
                   <div class="flex flex-col rounded-xl overflow-hidden">
-                    <a href="#" class="px-4 py-2 font-medium text-sm hover:bg-gray-50 border-b border-minimal-white">
+                    <a href="#"
+                      class="px-4 py-2 font-medium text-xs md:text-sm hover:bg-gray-50 border-b border-minimal-white">
                       <span><img src="./img/hugeicons_react.svg" alt="mdi_react"
                           class="w-4 h-4 inline-block mr-[3px]" />SuperStak Name #2</span></a>
                     <a href="#"
-                      class="px-4 py-2 font-medium text-sm hover:bg-gray-50 border-b border-minimal-white"><span><img
+                      class="px-4 py-2 font-medium text-xs md:text-sm hover:bg-gray-50 border-b border-minimal-white"><span><img
                           src="./img/hugeicons_react.svg" alt="mdi_react"
                           class="w-4 h-4 inline-block mr-[3px]" />SuperStak Name #3</span></a>
-                    <a href="#" class="px-4 py-2 font-medium text-sm hover:bg-gray-50"><span><img
+                    <a href="#" class="px-4 py-2 font-medium text-xs md:text-sm hover:bg-gray-50"><span><img
                           src="./img/hugeicons_react.svg" alt="mdi_react"
                           class="w-4 h-4 inline-block mr-[3px]" />SuperStak Name #4</span></a>
                   </div>
@@ -414,10 +410,11 @@
               </div>
             </div>
             <!-- Right: Attach + Send -->
-            <div class="flex items-center gap-[12px]">
+            <div class="flex items-center gap-2 md:gap-[12px]">
               <!-- Attachment -->
-              <button class="p-2 cursor-pointer" id="attachBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <button class="md:p-2 cursor-pointer" id="attachBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="md:w-[28px] md:h-[28px] h-[20px] w-[20px]"
+                  viewBox="0 0 28 28" fill="none">
                   <path
                     d="M21 9.22838V18.6667C21 20.5232 20.2625 22.3037 18.9497 23.6165C17.637 24.9292 15.8565 25.6667 14 25.6667C12.1435 25.6667 10.363 24.9292 9.05025 23.6165C7.7375 22.3037 7 20.5232 7 18.6667V7.00004C7 5.76236 7.49167 4.57538 8.36684 3.70021C9.24201 2.82504 10.429 2.33337 11.6667 2.33337C12.9043 2.33337 14.0913 2.82504 14.9665 3.70021C15.8417 4.57538 16.3333 5.76236 16.3333 7.00004V17.7124C16.3333 18.0188 16.273 18.3222 16.1557 18.6053C16.0385 18.8884 15.8666 19.1456 15.6499 19.3623C15.4332 19.579 15.176 19.7508 14.8929 19.8681C14.6098 19.9854 14.3064 20.0457 14 20.0457C13.3812 20.0457 12.7877 19.7999 12.3501 19.3623C11.9125 18.9247 11.6667 18.3312 11.6667 17.7124V9.33338"
                     stroke="#101136" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -426,8 +423,9 @@
               <input type="file" id="fileInput" class="hidden" />
 
               <!-- Send -->
-              <button class="flex justify-center items-center w-[34px] h-[34px] bg-black rounded-full cursor-pointer">
-                <img src="./img/arrow-top.svg" alt="" class="h-[14px]" />
+              <button
+                class="flex justify-center items-center md:w-[34px] md:h-[34px] w-5 h-5 bg-black rounded-full cursor-pointer">
+                <img src="./img/arrow-top.svg" alt="" class="md:h-[14px] h-2.5" />
               </button>
             </div>
           </div>
@@ -563,7 +561,7 @@
             Create AI Model SuperStak
           </h2>
         </div>
-        <div class="flex items-center gap-[12px]">
+        <div class="flex items-center gap-2 md:gap-[12px]">
           <button
             class="inline-flex items-center gap-[10px] p-2 md:px-[15px] md:py-[10px] text-base font-medium rounded-[5px] border border-minimal-white cursor-pointer hover:bg-gray-50">
             <img src="./img/help-circle-outline.svg" alt="help" class="" />
