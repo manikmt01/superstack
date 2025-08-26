@@ -28,17 +28,18 @@
         <i class="ri-menu-2-line"></i>
       </button>
       <!-- logo -->
-      <a href="/" class="inline-flex items-center gap-[9px]">
+      <a href="/" class="md:inline-flex hidden items-center gap-[9px]">
         <img src="./img/mdi_react.svg" alt="" class="w-6 h-6 md:block hidden" />
         <span class="text-lg font-semibold">SuperStak</span>
       </a>
       <!-- Dropdown -->
-      <div class="hidden md:inline-flex items-center gap-[11px]">
+      <div class="inline-flex items-center gap-[11px]">
         <div class="relative md:w-[340px] lg:w-[426px]">
           <!-- Button -->
           <button id="dropdownBtn"
-            class="w-full flex justify-between items-center px-[12px] py-[10px] border rounded-lg border-minimal-white text-base font-medium focus:outline-none">
-            <span class="truncate block">Lorem ipsum dolor sit amet consectetur. Mi arcu.</span>
+            class="w-full flex justify-between items-center px-2 md:px-[12px] py-2 md:py-[10px] border rounded-lg border-minimal-white text-xs md:text-base font-medium focus:outline-none md:h-auto h-[36px]">
+            <span class="truncate block">Lorem ipsum dolor sit<span class="md:inline hidden"> amet consectetur. Mi
+                arcu.</span><span class="md:hidden inline">....</span></span>
             <!-- Your SVG Icon -->
             <svg id="dropdownIcon" xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7"
               fill="none" class="transition-transform duration-300">
@@ -49,9 +50,9 @@
 
           <!-- Floating Dropdown Content -->
           <div id="dropdownContent"
-            class="hidden absolute left-0 mt-1 w-full border rounded-lg shadow-md bg-white text-base font-medium border-minimal-white z-50">
+            class="hidden absolute -left-6 md:left-0 mt-1 md:w-full min-w-[280px] border rounded-lg shadow-md bg-white text-base font-medium border-minimal-white z-50">
             <div
-              class="px-[12px] py-[10px] border-b border-minimal-white flex justify-between items-center hover:bg-gray-50 cursor-pointer rounded-t-lg">
+              class="px-2 md:px-[12px] py-2 md:py-[10px] md:text-base text-xs  border-b border-minimal-white flex justify-between items-center hover:bg-gray-50 cursor-pointer rounded-t-lg">
               <span>Headline of the chat</span>
               <div class="inline-flex flex-row justify-end items-center gap-[6px]">
                 <span
@@ -68,7 +69,7 @@
               </div>
             </div>
             <div
-              class="px-[12px] py-[10px] border-b border-minimal-white flex justify-between items-center hover:bg-gray-50 cursor-pointer">
+              class="px-2 md:px-[12px] py-2 md:py-[10px] md:text-base text-xs  border-b border-minimal-white flex justify-between items-center hover:bg-gray-50 cursor-pointer">
               <span>Headline of the chat</span>
               <div class="inline-flex flex-row justify-end items-center gap-[6px]">
                 <span
@@ -85,7 +86,7 @@
               </div>
             </div>
             <div
-              class="px-[12px] py-[10px] flex justify-between items-center hover:bg-gray-50 cursor-pointer rounded-b-lg">
+              class="px-2 md:px-[12px] py-2 md:py-[10px] md:text-base text-xs flex justify-between items-center hover:bg-gray-50 cursor-pointer rounded-b-lg">
               <span>Headline of the chat</span>
               <div class="inline-flex flex-row justify-end items-center gap-[6px]">
                 <span
@@ -104,8 +105,8 @@
           </div>
         </div>
         <button
-          class="min-w-[44px] min-h-[34px] flex items-center justify-center rounded-lg border border-minimal-white px-[15px] py-[10px] hover:bg-gray-50 cursor-pointer">
-          <img src="./img/plus.svg" alt="plus" class="w-[14px] h-[14px]" />
+          class="min-w-[44px] min-h-[34px] flex items-center justify-center rounded-lg border border-minimal-white px-2 md:px-[15px] py-[10px] hover:bg-gray-50 cursor-pointer">
+          <img src="./img/plus.svg" alt="plus" class="md:w-[14px] w-2.5 h-2.5 md:h-[14px]" />
         </button>
       </div>
       <!-- Profile Dropdown -->
@@ -113,7 +114,7 @@
         <!-- Trigger Button -->
         <div class="md:w-[124px] flex justify-end">
           <button
-            class="profile-btn flex justify-center items-center text-base text-white min-h-[40px] min-w-[39px] bg-accent-secondary rounded-lg font-medium focus:outline-none cursor-pointer">
+            class="profile-btn flex justify-center items-center text-white min-h-[36px] md:min-h-[40px] min-w-[39px] bg-accent-secondary rounded-lg font-medium focus:outline-none cursor-pointer md:text-base text-sm">
             <span>JS</span>
           </button>
         </div>
@@ -252,7 +253,7 @@
       </div>
     </div>
   </aside>
-  <main class="relative h-full flex flex-col justify-center items-center md:pt-0 pt-24 md:min-h-screen">
+  <main class="relative h-full flex flex-col justify-center items-center  min-h-screen">
     <section class=" px-4 w-full">
       <div class="max-w-[625px] mx-auto flex flex-col items-center gap-5">
         <!-- heading -->

@@ -22,23 +22,25 @@
 </head>
 
 <body class="font-Inter bg-white text-accent-secondary min-h-screen relative">
+
   <header class="w-full border-b border-minimal-white h-[65px] md:h-[89px] flex items-center fixed top-0 bg-white z-50">
     <nav class="flex items-center justify-between w-full px-4 lg:px-[80px]">
       <button onclick="openOffcanvas()" class="text-2xl inline-block md:hidden">
         <i class="ri-menu-2-line"></i>
       </button>
       <!-- logo -->
-      <a href="/" class="inline-flex items-center gap-[9px]">
+      <a href="/" class="md:inline-flex hidden items-center gap-[9px]">
         <img src="./img/mdi_react.svg" alt="" class="w-6 h-6 md:block hidden" />
         <span class="text-lg font-semibold">SuperStak</span>
       </a>
       <!-- Dropdown -->
-      <div class="hidden md:inline-flex items-center gap-[11px]">
+      <div class="inline-flex items-center gap-[11px]">
         <div class="relative md:w-[340px] lg:w-[426px]">
           <!-- Button -->
           <button id="dropdownBtn"
-            class="w-full flex justify-between items-center px-[12px] py-[10px] border rounded-lg border-minimal-white text-base font-medium focus:outline-none">
-            <span class="truncate block">Lorem ipsum dolor sit amet consectetur. Mi arcu.</span>
+            class="w-full flex justify-between items-center px-2 md:px-[12px] py-2 md:py-[10px] border rounded-lg border-minimal-white text-xs md:text-base font-medium focus:outline-none md:h-auto h-[36px]">
+            <span class="truncate block">Lorem ipsum dolor sit<span class="md:inline hidden"> amet consectetur. Mi
+                arcu.</span><span class="md:hidden inline">....</span></span>
             <!-- Your SVG Icon -->
             <svg id="dropdownIcon" xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7"
               fill="none" class="transition-transform duration-300">
@@ -49,9 +51,9 @@
 
           <!-- Floating Dropdown Content -->
           <div id="dropdownContent"
-            class="hidden absolute left-0 mt-1 w-full border rounded-lg shadow-md bg-white text-base font-medium border-minimal-white z-50">
+            class="hidden absolute -left-6 md:left-0 mt-1 md:w-full min-w-[280px] border rounded-lg shadow-md bg-white text-base font-medium border-minimal-white z-50">
             <div
-              class="px-[12px] py-[10px] border-b border-minimal-white flex justify-between items-center hover:bg-gray-50 cursor-pointer rounded-t-lg">
+              class="px-2 md:px-[12px] py-2 md:py-[10px] md:text-base text-xs  border-b border-minimal-white flex justify-between items-center hover:bg-gray-50 cursor-pointer rounded-t-lg">
               <span>Headline of the chat</span>
               <div class="inline-flex flex-row justify-end items-center gap-[6px]">
                 <span
@@ -68,7 +70,7 @@
               </div>
             </div>
             <div
-              class="px-[12px] py-[10px] border-b border-minimal-white flex justify-between items-center hover:bg-gray-50 cursor-pointer">
+              class="px-2 md:px-[12px] py-2 md:py-[10px] md:text-base text-xs  border-b border-minimal-white flex justify-between items-center hover:bg-gray-50 cursor-pointer">
               <span>Headline of the chat</span>
               <div class="inline-flex flex-row justify-end items-center gap-[6px]">
                 <span
@@ -85,7 +87,7 @@
               </div>
             </div>
             <div
-              class="px-[12px] py-[10px] flex justify-between items-center hover:bg-gray-50 cursor-pointer rounded-b-lg">
+              class="px-2 md:px-[12px] py-2 md:py-[10px] md:text-base text-xs flex justify-between items-center hover:bg-gray-50 cursor-pointer rounded-b-lg">
               <span>Headline of the chat</span>
               <div class="inline-flex flex-row justify-end items-center gap-[6px]">
                 <span
@@ -104,8 +106,8 @@
           </div>
         </div>
         <button
-          class="min-w-[44px] min-h-[34px] flex items-center justify-center rounded-lg border border-minimal-white px-[15px] py-[10px] hover:bg-gray-50 cursor-pointer">
-          <img src="./img/plus.svg" alt="plus" class="w-[14px] h-[14px]" />
+          class="min-w-[44px] min-h-[34px] flex items-center justify-center rounded-lg border border-minimal-white px-2 md:px-[15px] py-[10px] hover:bg-gray-50 cursor-pointer">
+          <img src="./img/plus.svg" alt="plus" class="md:w-[14px] w-2.5 h-2.5 md:h-[14px]" />
         </button>
       </div>
       <!-- Profile Dropdown -->
@@ -113,7 +115,7 @@
         <!-- Trigger Button -->
         <div class="md:w-[124px] flex justify-end">
           <button
-            class="profile-btn flex justify-center items-center text-base text-white min-h-[40px] min-w-[39px] bg-accent-secondary rounded-lg font-medium focus:outline-none cursor-pointer">
+            class="profile-btn flex justify-center items-center text-white min-h-[36px] md:min-h-[40px] min-w-[39px] bg-accent-secondary rounded-lg font-medium focus:outline-none cursor-pointer md:text-base text-sm">
             <span>JS</span>
           </button>
         </div>
@@ -284,7 +286,7 @@
             facilisis mi. Pretium amet lacus neque congue. Dictum at odio
             justo adipiscing vel habitant.
           </p>
-          <div class="flex flex-row items-center gap-2 md:gap-3 md:justify-between justify-center flex-wrap mt-[3px]">
+          <div class="flex flex-row items-center gap-2 md:gap-3 justify-between flex-wrap mt-[3px]">
             <div class="flex flex-row items-center gap-2.5 md:gap-[14px]">
               <button
                 class="inline-flex items-center gap-[3px] px-[10px] py-[6px] text-sm font-medium bg-white border border-minimal-white rounded-lg hover:bg-accent-secondary/20 cursor-pointer">
@@ -299,8 +301,8 @@
               <button
                 class="inline-flex items-center text-sm font-medium bg-white border border-minimal-white rounded-lg cursor-pointer md:min-h-auto min-h-[34px]">
                 <div
-                  class="inline-flex items-center gap-[3px] px-[10px] py-[6px] hover:bg-accent-secondary/20 rounded-l-lg">
-                  <img src="./img/iconoir_brain.svg" alt="" /><span class="md:inline-block hidden">Feedback</span>
+                  class="md:inline-flex hidden items-center gap-[3px] px-[10px] py-[6px] hover:bg-accent-secondary/20 rounded-l-lg">
+                  <img src="./img/iconoir_brain.svg" alt="" /><span class="">Feedback</span>
                 </div>
                 <span class="px-[10px] py-[6px] border-x border-minimal-white hover:bg-accent-secondary/20"><svg
                     xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
